@@ -8,6 +8,119 @@
   font-family: 'Poppins', sans-serif;
 }
 
+
+
+#header1{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 40px;
+  background-color: #e3e6f3;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+  z-index: 999;
+  position: sticky;
+  top:0;
+  left: 0;
+  height: 70px;
+  background: linear-gradient(to right, #FF6B6B, #FFD166, #06D6A0);
+}
+
+#header1 .logo {
+  width: 60px;  /* Adjust width to fit navbar */
+  height: auto; /* Keeps aspect ratio */
+  max-height: 78px; /* Ensures it does not exceed navbar height */
+  object-fit: contain; /* Ensures the image fits properly */
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto; /* Pushes the button to the right */
+}
+
+
+
+.btn1 {
+  padding: 8px 16px;
+  font-size: 16px;
+  background-color: #fdc275;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block; /* Ensures button behaves like an inline element */
+  text-align: center;
+  white-space: nowrap; /* Prevents text from breaking into a new line */
+}
+
+.btn1:hover {
+  background-color: #f9ca9e;
+}
+
+#navbar1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+#navbar1 li{
+  list-style-type: none;
+  padding: 0 20px;
+  position: relative;
+}
+#navbar1 li a:hover,#navbar li a.active{
+  color: #088178;
+}
+#navbar1 li a{
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color:black;
+  transition: 0.3s ease;
+}
+#navbar1 li a.active::after,#navbar li a:hover::after{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background:skyblue;
+  position:absolute;
+  bottom: -4px;
+  left: 20px;
+}
+
+.about {
+  float: right; /* Aligns the image to the right */
+  width: 80%; /* Adjusts the image width */
+  max-width: 500px; /* Prevents the image from being too large */
+  height: auto; /* Maintains aspect ratio */
+  border-radius: 15px; /* Smooth rounded corners */
+  margin-left: 50px; /* Adds spacing between text and image */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+.navbar1 .logo span {
+  color: #06D6A0; /* Contrasting color */
+}
+
+
+
+.navbar .menu-links {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+.navbar a {
+  color: #000000; /* Text color changed to white for contrast */
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #FF6B6B; /* Hover color */
+}
+
+
 body {
   overflow-x: hidden;
   overflow-y: scroll;
@@ -33,8 +146,8 @@ header .navbar {
 
 .navbar .logo {
   color: #fff;
-  font-weight: 600;
-  font-size: 2.1rem;
+  font-weight: 200;
+  font-size: 1.5rem;
   text-decoration: none;
 }
 
@@ -105,6 +218,15 @@ header .navbar {
 .hero-section .content button:hover {
   color: #fff;
   background: #C06B3E;
+}
+
+.menu-links {
+  display: flex; /* Ensures horizontal alignment */
+  justify-content: center; /* Centers links */
+  gap: 20px; /* Adds spacing between links */
+  list-style-type: none;
+  padding: 0 20px;
+  position: relative;
 }
 
 .menu-links li {
@@ -205,22 +327,30 @@ header .navbar {
 }
 
 #aboutUs {
-  padding: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  place-items:r;
-  background: linear-gradient(to right,#06D6A0,  #FFD166,#FF6B6B );
-  text-decoration-color: #000;
+  display: flex;
+  align-items: center; /* Align text and image on the same level */
+  justify-content: space-between;
+  padding: 10px 50px;
+  background: linear-gradient(to right, #06D6A0, #FFD166, #FF6B6B);
 }
-
+.about {
+  width: 40%; /* Ensure the image does not take too much space */
+  max-width: 450px; /* Prevents oversized images */
+  height: auto;
+  border-radius: 15px; /* Rounded corners */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  object-fit: cover;
+  display: flex;
+  align-items: center; /* Aligns properly */
+}
 #aboutUs img {
   width: 500px;
   border-radius: 10px;
 }
 
 .content {
-  margin: 20px 0;
- 
+  width: 60%; /* Text takes up most of the space */
+  color: white;
 }
 .content h1 {
   font-size: 100px;
@@ -297,7 +427,7 @@ header .navbar {
   justify-content: center;
   max-width: relative;
   max-height: relative;
-  padding: 30px;
+  padding: 60px;
   text-align: center;
 }
 
@@ -307,15 +437,22 @@ header .navbar {
 
 .ratings-container {
   display: flex;
-  margin: 20px 0;
+  margin: 10px 0;
+  
   background:linear-gradient(to left,#ff6767, #ffc642, #ff6767 );
 }
 
 .rating {
   flex: 1;
-  margin: 10px 5px;
+  margin: 20px 50px;
   padding: 20px;
   background: linear-gradient(to right,#FFD166, #06D6A0,  #FFD166 );
+ 
+  text-align: center;
+  
+  border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
 }
 
 .rating:hover,
@@ -327,13 +464,23 @@ header .navbar {
 .rating img {
   cursor: pointer;
   width: 40px;
+  height: auto;
 }
 
 .rating small {
   color: #555;
   cursor: pointer;
   display: inline-block;
-  margin: 10px 0 0;
+    font-size: 11px;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+}
+
+
+
+.rating img:hover {
+  transform: scale(1.1); /* Slightly enlarges the image on hover */
 }
 
 .rating:hover small,
@@ -418,13 +565,13 @@ html{
 }
 
 .panel-container strong {
-  line-height: 20px;
+  line-height: 30px;
 }
 
 .logo img{
   float:left;
   width: 100px;
-  height:auto;
+  height:400px;
 
 }
 
@@ -443,6 +590,8 @@ html{
   margin-left : 0;
   align-items: left;
 }
+
+
 
 .navbar button{
   position:fixed;
@@ -470,22 +619,54 @@ html{
 
 #contact{
   background: linear-gradient(to right,#06D6A0 ,  #FFD166,#FF6B6B );
+  
 }
 
 
 .container{
-  width: 75%;
+  width: 84%;
   background: #fff;
   border-radius: 6px;
   padding: 20px 60px 30px 40px;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   margin-left: 10%;
 }
-.container .content{
+#contact .content{
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-between; 
+} 
+
+.full-height .content{
+  padding: 20px;
 }
+
+.details {
+  margin-bottom: 20px;
+}
+
+.details i {
+  font-size: 24px;
+  color: #ff6b6b;
+  margin-bottom: 10px;
+}
+.topic {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.text-one,
+.text-two {
+  font-size: 14px;
+  color: #555;
+}
+
+.input-box {
+  margin-bottom: 15px;
+}
+
+
 .container .content .left-side{
   width: 25%;
   height: 100%;
@@ -499,21 +680,21 @@ html{
 .content .left-side::before{
   content: '';
   position: absolute;
-  height: 70%;
-  width: 2px;
+  height: 100%;
+  width: 3px;
   right: -15px;
   top: 50%;
   transform: translateY(-50%);
   background: #afafb6;
 }
 .content .left-side .details{
-  margin: 14px;
+  margin: 13px;
   text-align: center;
 }
 .content .left-side .details i{
   font-size: 30px;
   color: #eb7037;
-  margin-bottom: 10px;
+  margin-bottom: 40px;
 }
 .content .left-side .details .topic{
   font-size: 18px;
