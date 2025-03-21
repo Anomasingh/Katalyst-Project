@@ -13,39 +13,68 @@
    
   }
   header {
-    background: linear-gradient(to right, #ffb36b, #fef6e3, #06D6A0); 
-    color: rgb(255, 0, 0);
-    padding: 20px;
     text-align: center;
-    font-size: 30px;
+    background: linear-gradient(to right, #ff6b6b, #ffd166, #06d6a0);
+    padding: 20px;
+    color: #E65100;
+    font-size: 26px;
+    font-weight: bold;
+    text-transform: uppercase;
   }
  
   nav {
-    background-color: #8A2BE2;
-    padding: 10px;
     text-align: center;
-  }
+    background: linear-gradient(135deg, #ff4e50, #fc913a, #f9d423); /* Vibrant color scheme */
+    padding: 15px 0;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+}
+  
   nav a {
-    color: rgb(252, 255, 212);
-    text-decoration: none;
-    padding: 10px;
-  }
-  section {
-    background:  #06D6A0; 
-    padding: 20px;
-    text-align: center;
-    display: grid;
-    gap: 20px;
-  }
-  .container {
-    background-color: rgb(254, 255, 235);
-    padding: 10px 20px;
+    font-weight: bold;  /* Bold text */
+    text-decoration: none;  /* Removes underline */
+    color: #333;  /* Default text color */
+    font-size: 18px;
+    margin: 0 15px;
+    padding: 10px 15px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    max-width: 1050px; /* Reduced width */
-  margin-left: 15%;
-  }
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav a:hover {
+    background: #ff6b6b;
+    color: white;
+}
+
+  section {
+    padding: 60px 10%;
+    background: linear-gradient(to right, #ff6b6b, #ffd166, #06d6a0);
+}
+.container {
+    background: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 800px; /* Controls content width */
+    border-radius: 12px; /* Smooth edges */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Soft shadow effect */
+    transition: all 0.3s ease-in-out;
+}
+.container:hover {
+    transform: translateY(-5px); /* Slight upward movement */
+    box-shadow: 0px 12px 20px rgba(0, 0, 0, 0.3); /* Deeper shadow on hover */
+}
+
+.container h2 {
+    font-size: 22px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.container p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
   
   footer {
     background-color: #1E90FF;
